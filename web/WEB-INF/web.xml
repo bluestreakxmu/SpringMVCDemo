@@ -5,14 +5,13 @@
          version="3.1">
     <display-name>SpringMVCDemo</display-name>
 
-    <context-param>
+    <!--<context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>/WEB-INF/applicationContext.xml</param-value>
     </context-param>
-
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
+    </listener>-->
 
     <filter>
         <!--设置字符编码过滤器，避免post请求中文乱码-->
@@ -32,9 +31,14 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <!--Spring MVC Servlet-->
     <servlet>
         <servlet-name>dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath*:/spring-mvc.xml</param-value>
+        </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
 
