@@ -4,15 +4,6 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
     <display-name>SpringMVCDemo</display-name>
-
-    <!--<context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/applicationContext.xml</param-value>
-    </context-param>
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>-->
-
     <filter>
         <!--设置字符编码过滤器，避免post请求中文乱码-->
         <filter-name>encodingFilter</filter-name>
